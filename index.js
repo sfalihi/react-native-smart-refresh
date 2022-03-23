@@ -1,26 +1,16 @@
 import React from 'react';
 import {
     View,
-    Text,
     requireNativeComponent,
-    StyleSheet, ScrollView,Platform
+    StyleSheet,
+    Platform
 } from 'react-native';
-import PropTypes from 'prop-types';
 const RNSmartRefresh = requireNativeComponent('RNSmartRefreshView');
 const RNSmartRefreshHeader = requireNativeComponent('RNRefreshHeader');
-import RefreshAnimateHeader from "./src/RefreshAnimateHeader";
-import RefreshNormalHeader from "./src/RefreshNormalHeader";
 
 export class SmartRefresh extends React.PureComponent{
     constructor(props) {
         super(props);
-    }
-    static propTypes = {
-        style:PropTypes.object,
-        onRefresh:PropTypes.func,
-        onChangeState:PropTypes.func,
-        onChangeOffset:PropTypes.func,
-        refreshing:PropTypes.bool,
     }
     static defaultProps = {
         style:Platform.OS==='android'?{flex:1}:{position:'absolute',left:0,top:0,right:0},
@@ -70,10 +60,6 @@ export class SmartRefreshHeader extends React.PureComponent{
     }
 }
 
-export {
-    RefreshNormalHeader,
-    RefreshAnimateHeader
-}
 const styles = StyleSheet.create({
     container:{
         flex:1
