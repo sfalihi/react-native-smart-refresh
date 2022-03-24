@@ -56,7 +56,6 @@ public class SmartRefreshManager extends ViewGroupManager<RCTRefreshLayout> {
     @ReactProp(name = "enable")
     public void setEnable(RCTRefreshLayout view, Boolean enable) {
         view.setEnableRefresh(enable);
-
     }
 
 }
