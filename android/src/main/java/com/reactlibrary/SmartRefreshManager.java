@@ -45,5 +45,18 @@ public class SmartRefreshManager extends ViewGroupManager<RCTRefreshLayout> {
             view.finishRefresh();
         }
     }
+    
+    @ReactProp(name = "headerHeight")
+    public void setHeaderHeight(RCTRefreshLayout view, float headerHeight) {
+        if (headerHeight != 0.0f) {
+            view.setHeaderHeight(headerHeight);
+        }
+    }
+
+    @ReactProp(name = "enable")
+    public void setEnable(RCTRefreshLayout view, Boolean enable) {
+        view.setEnableRefresh(enable);
+
+    }
 
 }
