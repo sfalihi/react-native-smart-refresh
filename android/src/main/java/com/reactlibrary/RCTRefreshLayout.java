@@ -60,8 +60,7 @@ public class RCTRefreshLayout extends SmartRefreshLayout {
     @Override
     public void addView(View child, int index) {
         if (child instanceof RCTRefreshHeader) {
-             this.setRefreshHeader((RCTRefreshHeader) child);
-//            this.setRefreshHeader((RCTRefreshHeader) child,0,150);
+            this.setRefreshHeader((RCTRefreshHeader) child,0,150);
         } else if (child instanceof ReactScrollView) {
             this.setRefreshContent(child);
         }
